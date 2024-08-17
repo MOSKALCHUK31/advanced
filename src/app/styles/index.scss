@@ -1,7 +1,13 @@
 @import 'reset';
 @import 'variables/global';
-@import 'themes/light';
+@import 'themes/normal';
 @import 'themes/dark';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 .app {
     font: var(--font-m);
