@@ -1,13 +1,13 @@
 import { MainPage } from 'pages/MainPage'
 import { AboutPage } from 'pages/AboutPage'
-import {RouteProps} from 'react-router-dom';
+import { RouteProps } from 'react-router-dom'
 
 // Конфиг сделан для того, чтобы мы могли добавлять роуты, и не забывать
 // прописывать все параметры
 
 // Список роутов (просто перечисление их же)
 export enum AppRoutes {
-    MAIN =  'main',
+    MAIN = 'main',
     ABOUT = 'about'
 }
 
