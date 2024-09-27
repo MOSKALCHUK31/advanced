@@ -1,3 +1,4 @@
+import path from 'path'
 /*
  * For a detailed explanation regarding each configuration property and type check, visit:
  * https://jestjs.io/docs/configuration
@@ -30,11 +31,21 @@ export default {
     moduleDirectories: [
         'node_modules'
     ],
+    modulePaths: [
+        '<rootDir>src'
+    ],
+    moduleNameMapper: {
+        '\\.(css|scss)$': 'identity-obj-proxy',
+        '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': path.resolve(__dirname, 'jestEmptyComponent.tsx')
+    },
     testMatch: [
         // Обнаружил разницу между МАК ОС и ВИНДОУС!!!
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'
     ],
-    rootDir: '../../'
+    rootDir: '../../',
+    setupFilesAfterEnv: [
+        '<rootDir>config/jest/setupTests.ts'
+    ]
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
 
@@ -130,9 +141,6 @@ export default {
 
     // The paths to modules that run some code to configure or set up the testing environment before each test
     // setupFiles: [],
-
-    // A list of paths to modules that run some code to configure or set up the testing framework before each test
-    // setupFilesAfterEnv: [],
 
     // The number of seconds after which a test is considered as slow and reported as such in the results.
     // slowTestThreshold: 5,

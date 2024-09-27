@@ -43,7 +43,7 @@ module.exports = {
         semi: [2, 'never'],
         'comma-dangle': [2, 'never'],
         quotes: [2, 'single'],
-        'max-len': ['error', { ignoreComments: true }],
+        'max-len': 'off',
         'no-trailing-spaces': 'off'
     },
     globals: {
