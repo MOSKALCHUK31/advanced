@@ -16,4 +16,4 @@ export const NotFoundPage = (props: NotFoundPageProps) => {
             {t('Страница не найдена')}
         </div>
     )
-}
+} 

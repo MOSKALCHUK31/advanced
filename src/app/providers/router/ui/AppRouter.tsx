@@ -13,8 +13,7 @@ export const AppRouter = () => (
                         path={path}
                         element={element}
                     />
-                ))
-            }
+                ))}
         </Routes>
     </Suspense>
 )

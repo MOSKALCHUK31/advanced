@@ -12,4 +12,4 @@ export const Loader = (props: LoaderProps) => {
     return (
         <div className={classNames(cls.Loader, {}, [className])} />
     )
-}
+} 
