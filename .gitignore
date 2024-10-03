@@ -1,5 +1,4 @@
 .idea
 node_modules
 /dist
-*storybook.log
-storybook-static
+/storybook-static
