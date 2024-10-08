@@ -4,7 +4,12 @@ module.exports = {
         es2021: true,
         jest: true
     },
-    extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended', 'plugin:storybook/recommended'],
+    extends: [
+        'plugin:react/recommended',
+        'airbnb',
+        'plugin:i18next/recommended',
+        'plugin:storybook/recommended'
+    ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
@@ -16,9 +21,10 @@ module.exports = {
     plugins: [
         'react',
         '@typescript-eslint',
-        'i18next'
+        'i18next',
+        'react-hooks'
     ],
-    ignorePatterns: ['node_modules/', 'dist/'],
+    ignorePatterns: ['node_modules/', 'dist/', 'storybook-static/'],
     rules: {
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
@@ -41,7 +47,11 @@ module.exports = {
         'comma-dangle': [2, 'never'],
         quotes: [2, 'single'],
         'max-len': 'off',
-        'no-trailing-spaces': 'off'
+        'no-trailing-spaces': 'off',
+        'jsx-a11y/no-static-element-interactions': 'off',
+        'jsx-a11y/click-events-have-key-events': 'off',
+        'react-hooks/rules-of-hooks': 'error', 
+        'react-hooks/exhaustive-deps': 'error'
     },
     globals: {
         __IS_DEV__: true
