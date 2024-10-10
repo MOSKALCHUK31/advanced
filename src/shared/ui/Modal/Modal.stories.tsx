@@ -14,14 +14,14 @@ type Story = StoryObj<typeof Modal>
 
 export const Light: Story = {
     args: {
-        children: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium debitis inventore iure molestias neque porro quo repellat sed, suscipit velit.',
+        children: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium debitis inventore iure molestias neque porro quo repellat sed',
         isOpen: true
     }
 }
 
 export const Dark: Story = {
     args: {
-        children: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium debitis inventore iure molestias neque porro quo repellat sed, suscipit velit.',
+        children: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium debitis inventore iure molestias neque porro quo repellat sed',
         isOpen: true
     },
     decorators: [
