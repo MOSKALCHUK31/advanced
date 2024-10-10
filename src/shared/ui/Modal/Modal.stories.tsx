@@ -19,12 +19,12 @@ export const ModalLight: Story = {
     }
 }
 
-export const ModalDark: Story = {
-    args: {
-        children: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium debitis inventore iure molestias neque porro quo repellat sed, suscipit velit.',
-        isOpen: true
-    },
-    decorators: [
-        themeDecorator(Theme.DARK)
-    ]
-}
+// export const ModalDark: Story = {
+//     args: {
+//         children: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium debitis inventore iure molestias neque porro quo repellat sed, suscipit velit.',
+//         isOpen: true
+//     },
+//     decorators: [
+//         themeDecorator(Theme.DARK)
+//     ]
+// }
