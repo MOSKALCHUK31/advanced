@@ -12,19 +12,19 @@ const meta: Meta<typeof Modal> = {
 export default meta
 type Story = StoryObj<typeof Modal>
 
-export const ModalLight: Story = {
+export const Light: Story = {
     args: {
         children: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium debitis inventore iure molestias neque porro quo repellat sed, suscipit velit.',
         isOpen: true
     }
 }
 
-// export const ModalDark: Story = {
-//     args: {
-//         children: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium debitis inventore iure molestias neque porro quo repellat sed, suscipit velit.',
-//         isOpen: true
-//     },
-//     decorators: [
-//         themeDecorator(Theme.DARK)
-//     ]
-// }
+export const Dark: Story = {
+    args: {
+        children: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium debitis inventore iure molestias neque porro quo repellat sed, suscipit velit.',
+        isOpen: true
+    },
+    decorators: [
+        themeDecorator(Theme.DARK)
+    ]
+}
