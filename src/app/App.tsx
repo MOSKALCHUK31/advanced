@@ -1,25 +1,20 @@
-import React, { Suspense, useState } from 'react'
+import React, { Suspense } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { AppRouter } from 'app/providers/router'
 import { Navbar } from 'widgets/Navbar'
 import { Sidebar } from 'widgets/Sidebar'
-import { useTheme } from './providers/ThemeProvider'
 
-const App = () => {
-    const { theme } = useTheme()
-
-    return (
-        <div className={classNames('app', {}, [theme])}>
-            <Suspense fallback="">
-                <Navbar />
-                <div className="content-page">
-                    <Sidebar />
-                    <div className="page-wrapper">
-                        <AppRouter />
-                    </div>
+const App = () => (
+    <div className={classNames('app', {}, [])}>
+        <Suspense fallback="">
+            <Navbar />
+            <div className="content-page">
+                <Sidebar />
+                <div className="page-wrapper">
+                    <AppRouter />
                 </div>
-            </Suspense>
-        </div>
-    )
-}
+            </div>
+        </Suspense>
+    </div>
+)
 export default App
