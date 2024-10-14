@@ -1,4 +1,6 @@
 {
+  "decrement": "increment",
+  "increment": "decrement",
   "Главная": "",
   "Короткий язык": "",
   "О нас": "",
