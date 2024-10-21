@@ -1,5 +1,4 @@
 import webpack, { RuleSetRule } from 'webpack'
-import path from 'path'
 import { BuildPaths } from '../build/types/config'
 import { buildCssLoader } from '../build/loaders/buildCssLoader'
 
@@ -8,7 +7,7 @@ export default ({ config }: { config: webpack.Configuration }) => {
         build: '',
         html: '',
         entry: '',
-        src: path.resolve(__dirname, '..', '..', 'src')
+        src: '../src'
     }
     config.resolve.modules.push(paths.src)
     config.resolve.extensions.push('.ts', '.tsx')
@@ -26,6 +25,10 @@ export default ({ config }: { config: webpack.Configuration }) => {
         test: /\.svg$/,
         use: ['@svgr/webpack']
     })
+
+    config.plugins.push(new webpack.DefinePlugin({
+        __IS_DEV__: true
+    }))
 
     return config
 }
